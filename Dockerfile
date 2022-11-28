@@ -3,7 +3,6 @@ FROM alpine:3.17
 ENV TERRAFORM_VERSION=1.3.5
 ENV AWSCLI_VERSION=2.9.1
 
-
 VOLUME ["/work"]
 
 WORKDIR /work
@@ -34,10 +33,6 @@ RUN apk --no-cache update && \
     rm -rf /var/tmp/ && \
     rm -rf /tmp/* && \
     rm -rf /var/cache/apk/*
-
-COPY scripts /opt/scripts
-RUN chmod 777 /opt/scripts/*
-ENV PATH "$PATH:/opt/scripts"
 
 ENTRYPOINT [ "terraform" ]
 
