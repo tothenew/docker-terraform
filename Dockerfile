@@ -25,8 +25,9 @@ RUN apk --no-cache update && \
         jq \
         gettext-dev \
         g++ \
+        alpine-sdk \
         make && \
-    pip --no-cache-dir install awscli==$AWSCLI_VERSION && \
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64-$AWSCLI_VERSION.zip" -o "awscliv2.zip" && unzip awscliv2.zip && ./aws/install && \
     update-ca-certificates && \
     curl -sL https://releases.hashicorp.com/terraform/${TERRAFORM_VERSION}/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -o /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip && \
     unzip /tmp/terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /usr/bin && \
