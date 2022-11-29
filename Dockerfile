@@ -1,4 +1,4 @@
-FROM --platform linux/x86_64 alpine:3.17
+FROM --platform=linux/x86_64 alpine:3.17
 
 ENV TERRAFORM_VERSION=1.3.5
 ENV AWSCLI_VERSION=2.9.1
