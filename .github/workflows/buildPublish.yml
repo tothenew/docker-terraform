@@ -1,4 +1,4 @@
-name: Build and Push Docker image
+name: Build
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
 
 jobs:
   build:
-    name: Build and Push
+    name: BuildPublish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
