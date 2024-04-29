@@ -1,0 +1,5 @@
+plugins:
+  - artifactId: git
+  - artifactId: snyk-security-scanner
+  - artifactId: file-operations
+  - artifactId: subversion
