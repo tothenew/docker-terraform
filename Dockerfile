@@ -1,6 +1,6 @@
-FROM --platform=linux/amd64 amazon/aws-cli:2.9.1
+FROM --platform=linux/amd64 amazon/aws-cli:2.24.1
 
-ENV TERRAFORM_VERSION=1.3.5
+ENV TERRAFORM_VERSION=1.11.3
 
 VOLUME ["/work"]
 
